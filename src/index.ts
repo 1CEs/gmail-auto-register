@@ -6,14 +6,20 @@ import { delay } from "./utils/delay";
 
 async function main() {
     const proxy = await getRandomProxy();
-    const browser = await puppeteer.launch({ headless: false, args: [`--proxy-server=${proxy}`] });
+    const browser = await puppeteer.launch({ headless: false });
     try {
+        const baseURL = process.env.BASE_URL;
+
+        if (!baseURL) {
+            throw new Error("BASE_URL is not set");
+        }
+
         const page = await browser.newPage();
-        await page.goto("https://www.google.com");
-        await delay(5000);
+        await page.goto(baseURL);
+        // await delay(5000);
     } catch (error) {
         
     } finally {
-        await browser.close();
+        // await browser.close();
     }
 }
