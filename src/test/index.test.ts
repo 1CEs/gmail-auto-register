@@ -1,6 +1,6 @@
 import { expect, test, describe } from "bun:test";
 import { randomDomain } from "../utils/random-domain";
-import { randomUserAgent } from "../utils/random-user-agents";
+import { randomUserAgent } from "../utils/random-user-agent";
 
 describe("Random Functions", () => {
     describe("randomDomain", () => {

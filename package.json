@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun run --watch ./src/index.ts"
+    "dev": "bun run ./src/index.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"
@@ -13,6 +13,7 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "csv-parser": "^3.2.0",
     "puppeteer": "^24.6.1"
   }
 }
