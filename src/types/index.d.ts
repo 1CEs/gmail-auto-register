@@ -50,6 +50,7 @@ type RandomPhone = {
     number: string,
     code: string,
     is_archive: boolean,
+    short: string
 }
 
 type Message = {

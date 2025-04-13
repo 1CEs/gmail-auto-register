@@ -29,7 +29,8 @@ export const randomProxy = async () => {
         return {
             proxy: `${credentialData.proxy.hostname}:${credentialData.proxy.port}`,
             username: credentialData.proxy.login,
-            password: credentialData.proxy.password
+            password: credentialData.proxy.password,
+            code: credentialData.content.country.toLowerCase()
         }
     }
 }

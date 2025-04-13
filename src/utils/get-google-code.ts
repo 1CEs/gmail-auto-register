@@ -1,5 +1,3 @@
-import { randomPhone } from "./random-phone";
-
 export const getGoogleCode = async (phone: RandomPhone) => {
     const phoneEndpoint = process.env.phone_API_ENDPOINT;
     const countMessage = process.env.COUNT_MESSAGE;
@@ -18,7 +16,5 @@ export const getGoogleCode = async (phone: RandomPhone) => {
     const detailResponse = await fetch(detailURL);
     const data = await detailResponse.json() as any;
     const messages = data.messages as Message;
-    console.log(messages.data[0])
+    return messages.data[0]
 }
-
-await getGoogleCode(await randomPhone())

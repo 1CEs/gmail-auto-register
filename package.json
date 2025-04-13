@@ -2,6 +2,7 @@
   "name": "gmail-create-automation",
   "module": "index.ts",
   "type": "module",
+  "license": "BY-NC",
   "private": true,
   "scripts": {
     "dev": "bun run ./src/index.ts"
