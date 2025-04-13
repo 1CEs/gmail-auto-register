@@ -3,7 +3,7 @@ const randomMonth = () => {
 }
 
 const randomDay = () => {
-    return Math.floor(Math.random() * 31) + 1;
+    return Math.floor(Math.random() * 28) + 1;
 }
 
 const randomYear = () => {

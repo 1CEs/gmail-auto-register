@@ -26,10 +26,14 @@ export const randomDomain = (): RandomDomain => {
     if (!thaiNickname) {
         throw new Error('Failed to get Thai nickname');
     }
+
+    const capitalize = (str: string) => {
+        return str.toLowerCase().charAt(0).toUpperCase() + str.slice(1);
+    }
     
     return {
-        domain: `${randomUniVariation.toLowerCase()}${thaiNickname.toLowerCase()}@gmail.com`,
-        fullName: `${thaiNickname} ${randomUniVariation}`
+        domain: `${randomUniVariation.toLowerCase()}${thaiNickname.toLowerCase()}`,
+        fullName: `${thaiNickname} ${capitalize(randomUniVariation)}`
     }
 };
 

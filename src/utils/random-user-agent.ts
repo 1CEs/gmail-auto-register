@@ -1,9 +1,6 @@
 import { readCsv } from "./read-csv";
 
-export const randomUserAgent = () => {
+export const randomUserAgent = (): RandomUserAgent => {
     const userAgents = readCsv('./src/data/user-agents.csv');
-    return userAgents[Math.floor(Math.random() * userAgents.length)];
+    return userAgents[Math.floor(Math.random() * userAgents.length)] as RandomUserAgent;
 };
-
-
-console.log(randomUserAgent());
