@@ -1,4 +1,4 @@
-# Gmail Account Creation Automation
+# Gmail Register Automation
 
 ## ⚠️ DISCLAIMER
 ```
