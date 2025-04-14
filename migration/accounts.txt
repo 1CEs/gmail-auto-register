@@ -1,0 +1,1 @@
+clawmoodeng@gmail.com:<env.STATIC_PASSWORD>

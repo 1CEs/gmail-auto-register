@@ -36,11 +36,22 @@ type CountryDetail = {
     },
 }
 
-type ProxyOfCountry = {
-    hostname: string,
-    port: number,
-    ping: number,
-    archive: boolean,
+type ProxyResponse = {
+    count: number,
+    next: null,
+    previous: null,
+    results: {
+        id: string,
+        username: string,
+        password: string,
+        proxy_address: string,
+        port: number,
+        valid: boolean,
+        last_verification: string,
+        country_code: string,
+        city_name: string,
+        created_at: string
+    }[],
 }
 
 type RandomPhone = {
